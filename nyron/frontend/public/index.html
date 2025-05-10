@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<html>
+    <head>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    </head>
+    <body>
+        <div id="sidemenu">
+            <div class="sidemenu-category" id="sidemenu-friends">
+                <i class="fi fi-rr-users sidemenu-icon"></i> Friends
+            </div>
+            <div class="sidemenu-category" id="sidemenu-settings">
+                <i class="fi fi-rr-settings-sliders sidemenu-icon"></i> Settings
+            </div>
+            <div class="sidemenu-separator"></div>
+            <div class="sidemenu-category active" id="sidemenu-dm">
+                <i class="fi fi-rr-comment sidemenu-icon"></i> DM
+            </div>
+            <div style="flex: 1;"></div> 
+            <div class="profile-container">
+                <div class="profile-picture">
+                    <span>U</span>
+                </div>
+                <div class="profile-info">
+                    <div class="profile-name">Username</div>
+                    <div class="profile-status">Online</div>
+                </div>
+                <div class="profile-settings">
+                    <i class="fi fi-rr-menu-dots"></i>
+                    <div class="profile-dropdown" id="profile-dropdown">
+                        <div class="dropdown-item" id="dropdown-settings">
+                            <i class="fi fi-rr-settings sidemenu-icon"></i> Settings
+                        </div>
+                        <div class="dropdown-item">
+                            <i class="fi fi-rr-paint-brush sidemenu-icon"></i> Appearance
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="messages-container">
+            <div id="messages"></div>
+        </div>
+        <div id="chat-container">
+            <input id="message-input" type="text" style="flex:1;" autocomplete="off" />
+            <button id="send">
+                <i class="fi fi-rr-paper-plane-top send-button-icon"></i>
+                Send
+            </button>
+        </div>
+        <div id="chatinfo-menu">
+            <div class="chatinfo-header">
+                <div class="chatinfo-user">
+                    <div class="chatinfo-avatar">
+                        <span>D</span>
+                    </div>
+                    <div class="chatinfo-user-details">
+                        <h3 class="chatinfo-username">DM</h3>
+                        <div class="chatinfo-status">Online</div>
+                    </div>
+                </div>
+            </div>
+            <div class="chatinfo-section">
+                <h4 class="chatinfo-section-title">About</h4>
+                <p class="chatinfo-about">Direct messaging with DM.</p>
+            </div>
+        </div>
+        <div id="settings-container" class="hidden">
+            <div id="settings-sidebar">
+                <div class="settings-close-btn">
+                    <i class="fi fi-rr-cross"></i>
+                </div>
+                <div class="settings-category active">
+                    <i class="fi fi-rr-user"></i>
+                    <span>My Account</span>
+                </div>
+                <div class="settings-category">
+                    <i class="fi fi-rr-globe"></i>
+                    <span>Profiles</span>
+                </div>
+                <div class="settings-category">
+                    <i class="fi fi-rr-paint-brush"></i>
+                    <span>Appearance</span>
+                </div>
+                <div class="settings-separator"></div>
+                <div class="settings-category settings-logout">
+                    <i class="fi fi-rr-sign-out"></i>
+                    <span>Log Out</span>
+                </div>
+            </div>
+            <div id="settings-content">
+                <h2>My Account</h2>
+                <div class="settings-section">
+                    <div class="settings-profile-header">
+                        <div class="settings-profile-banner"></div>
+                        <div class="settings-profile-avatar">
+                            <span>U</span>
+                            <div class="settings-avatar-edit">
+                                <i class="fi fi-rr-pencil"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="settings-form">
+                        <div class="settings-input-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" value="Username" class="settings-input">
+                        </div>
+                        <div class="settings-input-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="user@example.com" class="settings-input">
+                        </div>
+                        <div class="settings-input-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Add a phone number" class="settings-input">
+                        </div>
+                        <div class="settings-btn-group">
+                            <button class="settings-btn settings-btn-primary">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h3>Password and Authentication</h3>
+                    <button class="settings-btn settings-btn-secondary">
+                        Change Password
+                    </button>
+                </div>
+                <div class="settings-section">
+                    <h3>Account Removal</h3>
+                    <div class="settings-danger-zone">
+                        <p>Permanently delete your account and all of your data.</p>
+                        <button class="settings-btn settings-btn-danger">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
